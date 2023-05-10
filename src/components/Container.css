@@ -1,0 +1,13 @@
+.container-todo-app {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    
+}
+
+body {
+    background-color: red;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 auto;
+}
