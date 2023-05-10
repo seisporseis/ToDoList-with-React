@@ -9,7 +9,12 @@ const TaskList = (props) => {
         done: item.id === name ? checked : item.done
         
     }))
-    setList(updateList);
+    const sortedDatacheck = [...updateList].sort((a, b) => {
+        if (a.done && !b.done) return 1;
+        if (!a.done && b.done) return -1;
+        return a.description.localeCompare(b.description);
+      });
+    setList(sortedDatacheck);
     };
     const checkB = list.map (item => (
         <Checkbox key={item.id} data={item} onChange={onChangeStatus}/>
