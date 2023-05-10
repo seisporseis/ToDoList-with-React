@@ -10,7 +10,7 @@ const TaskList = (props) => {
     setList(updateList);
     };
     const checkB = list.map (item => (
-        <Checkbox key={item.id} data={item}/>
+        <Checkbox key={item.id} data={item} onChange={onChangeStatus}/>
     ));
 	return (
         <div className="todo-list">
