@@ -8,15 +8,15 @@ const Container = () => {
   
   const [list, setList] = useState([]); //creamos un array con los items
   const handleAddItem = addItem => {
-    //setList([...list, addItem]); //esto lo cambiamos por la linea 12
-    setList(list.push(addItem));
+    setList([...list, addItem]); //esto lo cambiamos por la linea 12
+    // setList(list.push(addItem));
   };
     return (
       <div>
 
         <FormTodo handleAddItem={handleAddItem}/>
         <TaskList list={list} setList={setList}/>
-        Container!
+        
       </div>
     )
   }
