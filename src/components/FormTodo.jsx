@@ -5,7 +5,7 @@ const FormTodo = (props) => {
     const [description, setDescription] = useState("");//agregaria un useState, con su descripción
     const { handleAddItem } = props;//añade el item a la lista
     const handleSubmit = e => { //este es el manejador del submit, cuando pulsemos el botón pasará lo que hay dentro del manejador
-        e.preventDefault();//borra el item cuando lo añadimos a la lista
+        e.preventDefault();//evita que la página se actualice al pulsar el botón submit
         handleAddItem ({
             done: false, //por defecto tiene valor false y cuando se true,se marca como realizada
             id: (+new Date()).toString(),//marca unica temporal del item.
