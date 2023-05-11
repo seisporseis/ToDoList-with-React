@@ -1,6 +1,5 @@
 import FormTodo from "./FormTodo";
 import TaskList from "./TaskList";
-import './Container.css'
 import { useState , useEffect } from "react";
 
 
@@ -45,7 +44,7 @@ const Container = () => {
   };
     return (
       <div>
-
+        
         <FormTodo handleAddItem={handleAddItem}/>
         <TaskList list={list} setList={setList}/>
         
