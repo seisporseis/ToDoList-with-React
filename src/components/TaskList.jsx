@@ -3,7 +3,7 @@ import Checkbox from "./CheckBox";
 const TaskList = (props) => {
     const { list, setList } = props;
     const onChangeStatus = e => {
-        console.log(e)
+        // console.log(e)
         const { name, checked } = e.target;
         const updateList = list.map(item => ({
             ...item,
@@ -28,10 +28,11 @@ const TaskList = (props) => {
     };
 
     const checkB = list.map(item => (
-        <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
+        <Checkbox key={item.id} data={item} onChange={onChangeStatus} list={list} setList={setList}/>
     ));
     return (
         <div className="todo-list">
+            
             {list.length ? checkB : "no hay tareas"}
             {list.length ? (
                 <p>
