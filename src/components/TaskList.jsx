@@ -1,35 +1,45 @@
 import Checkbox from "./CheckBox";
 
 const TaskList = (props) => {
-    const{ list, setList } = props; 
+    const { list, setList } = props;
     const onChangeStatus = e => {
         console.log(e)
         const { name, checked } = e.target;
-        const updateList = list.map(item => ({...item, 
-        done: item.id === name ? checked : item.done
-        
-    }))
-    const sortedDatacheck = [...updateList].sort((a, b) => {
-        if (a.done && !b.done) return 1;
-        if (!a.done && b.done) return -1;
-        return a.description.localeCompare(b.description);
-      });
-    setList(sortedDatacheck);
+        const updateList = list.map(item => ({
+            ...item,
+            done: item.id === name ? checked : item.done
+
+        }))
+        const sortedDatacheck = [...updateList].sort((a, b) => {
+            if (a.done && !b.done) return 1;
+            if (!a.done && b.done) return -1;
+            return a.description.localeCompare(b.description);
+        });
+
+        localStorage.setItem('items', JSON.stringify(sortedDatacheck));
+
+        setList(sortedDatacheck);
     };
-    const checkB = list.map (item => (
-        <Checkbox key={item.id} data={item} onChange={onChangeStatus}/>
+
+    const onClickRemoveItem = e => {
+        const updateList = list.filter(item => !item.done);
+        setList(updateList);
+    };
+
+    const checkB = list.map(item => (
+        <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
     ));
-	return (
+    return (
         <div className="todo-list">
             {list.length ? checkB : "no hay tareas"}
-            {/* {list.length ? (
+            {list.length ? (
                 <p>
                     <button className="check" onClick={onClickRemoveItem}>
                         Delete all done
-                    </button> 
+                    </button>
                 </p>
-                ) : null} */}
-        </div> 
+            ) : null}
+        </div>
     );
 };
 
