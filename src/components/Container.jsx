@@ -10,13 +10,14 @@ const Container = () => {
   const handleAddItem = addItem => {
     setList([...list, addItem]); //esto lo cambiamos por la linea 12
     // setList(list.push(addItem));
+    //setList((list.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))));
 
-    useEffect(() => {
+    /* useEffect(() => {
       
       let listaLowerCase = list.map((item) => item.toLowerCase());
       const sort = listaLowerCase.sort();
       setList(sort)
-    })
+    }) */
   };
     return (
       <div>
