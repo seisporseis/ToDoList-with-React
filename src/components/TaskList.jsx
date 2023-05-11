@@ -24,6 +24,7 @@ const TaskList = (props) => {
     const onClickRemoveItem = e => {
         const updateList = list.filter(item => !item.done);
         setList(updateList);
+        localStorage.setItem('items', JSON.stringify(updateList));
     };
 
     const checkB = list.map(item => (
