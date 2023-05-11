@@ -10,6 +10,15 @@ const TaskList = (props) => {
             done: item.id === name ? checked : item.done
 
         }))
+
+    // const toDo = ({ todo }) => {
+    // const itemClasses = todo.done ? "strike blur" : "";
+    //     return (
+    //     <div className={itemClasses}>
+    //         {todo.description}
+    //     </div>
+    //     );
+    // };
         const sortedDatacheck = [...updateList].sort((a, b) => {
             if (a.done && !b.done) return 1;
             if (!a.done && b.done) return -1;
@@ -38,7 +47,7 @@ const TaskList = (props) => {
 
                 <p>
                     <button className="check" onClick={onClickRemoveItem}>
-                        Delete all done
+                        Borrar tareas <br /> completadas
                     </button>
                 </p>
             ) : null}
