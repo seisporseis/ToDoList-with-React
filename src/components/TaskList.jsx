@@ -29,6 +29,7 @@ const TaskList = (props) => {
 
     const checkB = list.map(item => (
         <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
+       
     ));
     return (
         <div className="todo-list">
@@ -38,6 +39,7 @@ const TaskList = (props) => {
                     <button className="check" onClick={onClickRemoveItem}>
                         Delete all done
                     </button>
+                    
                 </p>
             ) : null}
         </div>

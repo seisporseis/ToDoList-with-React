@@ -21,7 +21,8 @@ const FormTodo = (props) => {
                     className="text" 
                     value={description} 
                     onChange={ e => setDescription(e.target.value)} />
-                    <button className="btn-task" disabled={description ? "" : "disable"}>Add</button>
+                    <button className="btn-task" disabled={description ? "" : "disable"}><i class="fa-solid fa-paw" style="color: #000000;"></i>Add</button>
+                    
                 </div> 
             </div>
         </form>  

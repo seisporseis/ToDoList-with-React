@@ -17,7 +17,7 @@ const Container = () => {
 
 
   const handleAddItem = addItem => {
-
+    
     console.log(addItem)
     // setList([...list, addItem]); //esto lo cambiamos por la linea 12
     

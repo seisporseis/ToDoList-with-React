@@ -4,7 +4,8 @@ const Checkbox = props => {
 		onChange,
 		data: { id, description, done}
 	} = props;
-	
+
+
 	
 	return (
 		
