@@ -32,7 +32,7 @@ const Checkbox = props => {
 			defaultChecked={done}
 			onChange={onChange}
 			/>
-			<div className="todo__text">{description}</div> 
+			<div className="todo__ext">{description}</div> 
 			<button className="btn-borrar-item" onClick={onClickBorrarItem}>borrar</button>
 			 {/* <button className="btn-editar-item" onClick={onClickEditarItem}>editar</button> */}
 			</label>
