@@ -1,24 +1,25 @@
-/* html {
-  background: #ddd;  
-  height: 100%;
-  display: flex;
-  justify-content: center;
-} */
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
 
 body {
-  background-color:#3750a1;
+  background: rgb(14,26,64);
+  background: linear-gradient(143deg, rgba(14,26,64,1) 27%, rgba(148,107,45,1) 41%, rgba(34,47,91,1) 68%);
+  background-repeat: no-repeat;
+  height: 100vh;
   text-align: center;
   margin: 0 auto;
   padding: 0 auto;
 }
 
 .App {
-  font-family: 'Roboto Mono', monospace;
   
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;                                           
 }
 
 h2{
+  font-family: 'Harry Potter', sans-serif;
+  color: rgb(183, 164, 136);
   font-size: 35px;
+  padding-top: 2rem;
   margin: 1rem 4rem 1rem 1.6rem;
 }
 
@@ -61,7 +62,7 @@ button:focus-visible {
 }
 
 hr{
-  background-color: #946b2d;
+  background-color: rgba(148,107,45,1);
   height: 2px;
 }
 
