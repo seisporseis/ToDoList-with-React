@@ -22,13 +22,8 @@ const FormTodo = (props) => {
                     className="text" 
                     value={description} 
                     onChange={ e => setDescription(e.target.value)} />
-<<<<<<< HEAD
-                    <button className="btn-task" disabled={description ? "" : "disable"}><i class="fa-solid fa-paw" style="color: #000000;"></i>Add</button>
-                    
-=======
                     <button className="btn-task"  disabled={description ? "" : "disable"}><img width="30" height="30" src="https://img.icons8.com/ios-filled/30/0e1a40/add--v1.png" alt="add--v1"/></button>
                     <hr />
->>>>>>> develop
                 </div> 
             </div>
         </form>  

@@ -8,10 +8,6 @@ const Checkbox = props => {
 		data: { id, description, done }
 	} = props;
 
-<<<<<<< HEAD
-
-	
-=======
 	const { list, setList } = props;
 	const [todoEdit, setTodoEdit] = useState(null)
 	const [editingText, setEditingText] = useState("")
@@ -38,7 +34,6 @@ const Checkbox = props => {
 		localStorage.setItem('items', JSON.stringify(updatedTodos));
 	}
 
->>>>>>> develop
 	return (
 
 		<>{/*librería que agrupa elementos  */}
