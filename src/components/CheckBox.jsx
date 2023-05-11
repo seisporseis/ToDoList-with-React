@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 
 const Checkbox = props => {
@@ -6,37 +7,71 @@ const Checkbox = props => {
 		onChange,
 		data: { id, description, done }
 	} = props;
-	
+
 	const { list, setList } = props;
-		console.log(list)
-	
+	const [todoEdit, setTodoEdit] = useState(null)
+	const [editingText, setEditingText] = useState("")
+
+	const idValue = props.data.id;
+
 	const onClickBorrarItem = e => {
-		const borrarItem =  list.filter(item =>item.id != props.data.id) 
+		const borrarItem = list.filter(item => item.id != idValue)
 		setList(borrarItem);
 		localStorage.setItem('items', JSON.stringify(borrarItem));
 	}
-		
-	// const onClickEditarItem = e => {
-		
-	// }   
-    
-	
+
+	function editTodo(idValue) {
+		const updatedTodos = [...list].map((list) => {
+			if (list.id == idValue) {
+				list.description = editingText
+			}
+			return list
+		})
+		setList(updatedTodos)
+		setTodoEdit(null)
+		setEditingText("")
+
+		localStorage.setItem('items', JSON.stringify(updatedTodos));
+	}
+
 	return (
-		
+
 		<>{/*librería que agrupa elementos  */}
-		
+
 			<label className="todo new-item">
-			<input 
-			className ="todo__state"
-			name={id} type ="checkbox"
-			defaultChecked={done}
-			onChange={onChange}
-			/>
-			<div className="todo__ext">{description}</div> 
-			<button className="btn-borrar-item" onClick={onClickBorrarItem}>borrar</button>
-			 {/* <button className="btn-editar-item" onClick={onClickEditarItem}>editar</button> */}
+				<input
+					className="todo__state"
+					name={id} type="checkbox"
+					defaultChecked={done}
+					onChange={onChange}
+				/>
+				{todoEdit == idValue ?
+					(<input
+						type="text"
+						onChange={(e) => setEditingText(e.target.value)}
+						value={editingText}
+					/>)
+					:
+					(<div className="todo__text">{description}</div>)}
+
+				<button className="btn-borrar-item" onClick={onClickBorrarItem}>borrar</button>
+
+				{todoEdit == idValue ?
+					(<button className="btn-enviar-editar-item"
+						onClick={() =>
+						editTodo(idValue)}>Enviar editar
+						</button>)
+					:
+					(<button  className="btn-editar-item" onClick={() =>
+						setTodoEdit(idValue)}>
+						Editar
+					</button>
+					)}
+
+				
+
 			</label>
-			
+
 		</>
 	);
 };
