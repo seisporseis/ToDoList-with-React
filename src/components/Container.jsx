@@ -1,6 +1,5 @@
 import FormTodo from "./FormTodo";
 import TaskList from "./TaskList";
-import './Container.css'
 import { useState , useEffect } from "react";
 
 
@@ -17,8 +16,13 @@ const Container = () => {
 
 
   const handleAddItem = addItem => {
+<<<<<<< HEAD
     
     console.log(addItem)
+=======
+
+    // console.log(addItem)
+>>>>>>> develop
     // setList([...list, addItem]); //esto lo cambiamos por la linea 12
     
     const newList = list.slice();
@@ -37,15 +41,15 @@ const Container = () => {
     
     localStorage.setItem('items', JSON.stringify(sortedDatacheck));
 
-    console.log(sortedDatacheck)
+    // console.log(sortedDatacheck)
     setList(sortedDatacheck);
 
-    console.log(list)
+    // console.log(list)
     
   };
     return (
       <div>
-
+        
         <FormTodo handleAddItem={handleAddItem}/>
         <TaskList list={list} setList={setList}/>
         

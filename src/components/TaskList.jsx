@@ -3,13 +3,22 @@ import Checkbox from "./CheckBox";
 const TaskList = (props) => {
     const { list, setList } = props;
     const onChangeStatus = e => {
-        console.log(e)
+        // console.log(e)
         const { name, checked } = e.target;
         const updateList = list.map(item => ({
             ...item,
             done: item.id === name ? checked : item.done
 
         }))
+
+    // const toDo = ({ todo }) => {
+    // const itemClasses = todo.done ? "strike blur" : "";
+    //     return (
+    //     <div className={itemClasses}>
+    //         {todo.description}
+    //     </div>
+    //     );
+    // };
         const sortedDatacheck = [...updateList].sort((a, b) => {
             if (a.done && !b.done) return 1;
             if (!a.done && b.done) return -1;
@@ -28,16 +37,22 @@ const TaskList = (props) => {
     };
 
     const checkB = list.map(item => (
+<<<<<<< HEAD
         <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
        
+=======
+        <Checkbox key={item.id} data={item} onChange={onChangeStatus} list={list} setList={setList} />
+>>>>>>> develop
     ));
     return (
         <div className="todo-list">
-            {list.length ? checkB : "no hay tareas"}
+            {list.length ? checkB : "no hay tareas"} {/* si la lista está vacia muestra el mensaje "no hay tareas"*/}
             {list.length ? (
+
+
                 <p>
                     <button className="check" onClick={onClickRemoveItem}>
-                        Delete all done
+                        Borrar tareas <br /> completadas
                     </button>
                     
                 </p>
