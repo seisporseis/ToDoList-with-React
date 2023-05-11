@@ -1,17 +1,91 @@
-
-html {
+/* html {
   background: #ddd;  
   height: 100%;
   display: flex;
   justify-content: center;
-}
+} */
 
 body {
-  /* width: 100%; */
+  background-color:#3750a1;
+  text-align: center;
   margin: 0 auto;
+  padding: 0 auto;
 }
 
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  
 }
+
+h2{
+  font-size: 35px;
+  margin: 1rem 4rem 1rem 1.6rem;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #252fc4;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*------Conteiner--------*/
+
+.container-todo-app {
+  background-color:#0e1a40;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  
+}
+
+
+
+/*----FormTodo---*/
+
+.todo-list{
+  height: 150px;
+  align-items: center;
+
+}
+
+hr{
+  background-color: #946b2d;
+  height: 2px;
+}
+
+.text {
+  margin: 0 0.7rem 1rem 1.1rem;
+  border-radius: 3px;
+  box-shadow: 2px 5px 8px;
+  width: 213px;
+  height: 35px;
+}
+
+
+
+
+  
+/*----TAsklist----*/
+
+/*----CheckBox-----*/
+
+.todo-new-item {
+  display: flex;
+}
+
+.todo-state {
+  margin: 0.3rem 0.5rem 0.5rem 1.6rem;;
+} 
+

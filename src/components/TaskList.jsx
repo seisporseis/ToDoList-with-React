@@ -33,7 +33,7 @@ const TaskList = (props) => {
     return (
         <div className="todo-list">
             {list.length ? checkB : "no hay tareas"} {/* si la lista está vacia muestra el mensaje "no hay tareas"*/} 
-            {list.length ? (
+             {list.length ? (
            
             
                 <p>
