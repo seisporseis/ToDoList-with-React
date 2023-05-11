@@ -15,14 +15,14 @@ const FormTodo = (props) => {
     };
 	return(
         <form onSubmit={handleSubmit}>
-            <div className="todo-list">
-                <h2>Mis tareas</h2>
+            <div className="todo-input">
+                <h1>Mis tareas</h1>
                 <div className="file-input"> 
                     <input type="text" 
                     className="text" 
                     value={description} 
                     onChange={ e => setDescription(e.target.value)} />
-                    <button className="btn-task" src="../img/" disabled={description ? "" : "disable"}></button>
+                    <button className="btn-task"  disabled={description ? "" : "disable"}><img width="30" height="30" src="https://img.icons8.com/ios-filled/30/0e1a40/add--v1.png" alt="add--v1"/></button>
                     <hr />
                 </div> 
             </div>
