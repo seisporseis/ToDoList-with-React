@@ -1,17 +1,132 @@
-
-html {
-  background: #ddd;  
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
 
 body {
-  /* width: 100%; */
+  background: rgb(14,26,64);
+  background: linear-gradient(143deg, rgba(14,26,64,1) 27%, rgba(148,107,45,1) 41%, rgba(34,47,91,1) 68%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
   margin: 0 auto;
+  padding: 0 auto;
 }
 
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;                                           
 }
+
+h2{
+  font-family: 'Harry Potter', sans-serif;
+  color: rgb(183, 164, 136);
+  font-size: 35px;
+  padding-top: 2rem;
+  margin: 1rem 4rem 1rem 1.6rem;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #252fc4;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*------Conteiner--------*/
+
+.container-todo-app {
+  background-color:#0e1a40;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  
+}
+
+
+
+/*----FormTodo---*/
+
+.todo-list{
+  height: 150px;
+  align-items: center;
+
+}
+
+hr{
+  background-color: rgba(148,107,45,1);
+  height: 2px;
+}
+
+.text {
+  margin: 0 0.7rem 1rem 1.1rem;
+  border-radius: 3px;
+  box-shadow: 2px 5px 8px;
+  width: 213px;
+  height: 35px;
+}
+
+
+
+
+
+
+  
+/*----TAsklist----*/
+
+/*----CheckBox-----*/
+
+.todo-new-item {
+  display: flex;
+}
+
+.todo-state {
+  margin: 0.3rem 0.5rem 0.5rem 1.6rem;;
+} 
+
+.new-item {
+  background-color: #dadadadf;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1% 0;
+  margin-bottom: 3%;
+  border-radius: 10px;
+
+}
+
+.todo__text {
+  color: #0e1a40;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+.btn-borrar-item {
+  background-color: #946b2d;
+  border-radius: 50%;
+  padding: 5px 7px;
+  
+}
+
+/* input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+} */
