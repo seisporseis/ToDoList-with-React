@@ -7,17 +7,41 @@ import { useState , useEffect } from "react";
 const Container = () => {
   
   const [list, setList] = useState([]); //creamos un array con los items
-  const handleAddItem = addItem => {
-    setList([...list, addItem]); //esto lo cambiamos por la linea 12
-    // setList(list.push(addItem));
-    //setList((list.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))));
+  
+  useEffect(() => {
+    const storedItems = localStorage.getItem('items')
+    if (storedItems) {
+      setList(JSON.parse(storedItems))
+    }
+  }, [])
 
-    /* useEffect(() => {
-      
-      let listaLowerCase = list.map((item) => item.toLowerCase());
-      const sort = listaLowerCase.sort();
-      setList(sort)
-    }) */
+
+  const handleAddItem = addItem => {
+
+    console.log(addItem)
+    // setList([...list, addItem]); //esto lo cambiamos por la linea 12
+    
+    const newList = list.slice();
+    newList.push(addItem);
+    
+    // newList.map((item) => console.log(item.description))
+    
+    // const sortedData = [...newList].sort((a, b) => a.description.localeCompare(b.description))
+    // const sortedDatacheck = [...sortedData].sort((a, b) => a.done == false ? 1 : a.done == true ? -1 : 0)
+    
+    const sortedDatacheck = [...newList].sort((a, b) => {
+      if (a.done && !b.done) return 1;
+      if (!a.done && b.done) return -1;
+      return a.description.localeCompare(b.description);
+    });
+    
+    localStorage.setItem('items', JSON.stringify(sortedDatacheck));
+
+    console.log(sortedDatacheck)
+    setList(sortedDatacheck);
+
+    console.log(list)
+    
   };
     return (
       <div>

@@ -5,7 +5,7 @@ const Checkbox = props => {
 		data: { id, description, done}
 	} = props;
 	
-	//return <div>Checkbox!</div>;
+	
 	return (
 		
 		<>{/*librería que agrupa elementos  */}

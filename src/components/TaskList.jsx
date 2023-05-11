@@ -1,26 +1,48 @@
 import Checkbox from "./CheckBox";
 
 const TaskList = (props) => {
-    const{ list, setList } = props; 
-    const onChangeStatus = e => { //manejador de eventos para onChange
-        const { name, checked } = e.target; //recibe los datos de checkBox
-        const updateList = list.map(item => ({...item, //recorre  con map y actualiza los datos
-        done: item.id === name ? checked : item.done
-    }))
-    setList(updateList);
+    const { list, setList } = props;
+    const onChangeStatus = e => {
+        console.log(e)
+        const { name, checked } = e.target;
+        const updateList = list.map(item => ({
+            ...item,
+            done: item.id === name ? checked : item.done
+
+        }))
+        const sortedDatacheck = [...updateList].sort((a, b) => {
+            if (a.done && !b.done) return 1;
+            if (!a.done && b.done) return -1;
+            return a.description.localeCompare(b.description);
+        });
+
+        localStorage.setItem('items', JSON.stringify(sortedDatacheck));
+
+        setList(sortedDatacheck);
     };
-    const checkB = list.map (item => (
-        <Checkbox key={item.id} data={item} onChange={onChangeStatus}/> //recorre list con map para generar n componentes en checkBox
+
+    const onClickRemoveItem = e => {
+        const updateList = list.filter(item => !item.done);
+        setList(updateList);
+        localStorage.setItem('items', JSON.stringify(updateList));
+    };
+
+    const checkB = list.map(item => (
+        <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
     ));
-	return (
+    return (
         <div className="todo-list">
             {list.length ? checkB : "no hay tareas"} {/* si la lista está vacia muestra el mensaje "no hay tareas"*/} 
-            {/* {list.length ? (
+            {list.length ? (
+           
+            
                 <p>
-                    <button className="check"></button> 
+                    <button className="check" onClick={onClickRemoveItem}>
+                        Delete all done
+                    </button>
                 </p>
-                ) : null} */}
-        </div> 
+            ) : null}
+        </div>
     );
 };
 
