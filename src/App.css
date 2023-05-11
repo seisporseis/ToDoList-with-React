@@ -4,17 +4,15 @@ body {
   background-image: url("public/fondo ravenclaw.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed
-  ;
+  background-position-x: center;
   height: 100vh;
   text-align: center;
   margin: 0 auto;
-  padding: 0 auto;
 }
 
 .App {
-  
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;                                           
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 h1 {
@@ -24,17 +22,16 @@ h1 {
   margin: 2rem 4rem 1rem 1.6rem;
 }
 
-button {
+/* button {
   border-radius: 5px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1.2em; 
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 500; 
   cursor: pointer;
-  transition: border-color 0.25s;
-}
+} */
 
-button.check {
+/* button.check {
   background-color: #946B2D;
   color: white;
   border-radius: 15px;
@@ -45,8 +42,8 @@ button.check {
   -webkit-user-select: none;
 
 }
-
-button.check:hover {
+ */
+/* button.check:hover {
   transform: translateY(-1px);
 }
 
@@ -55,18 +52,18 @@ button.check:active {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
-}
+} */
 
 /*------Conteiner--------*/
 
-.container-todo-app {
+/* .container-todo-app {
   background-color:#0e1a40;
   width: 100%;
   text-align: center;
   margin: auto;
   
 }
-
+ */
 
 
 /*----FormTodo---*/
@@ -90,7 +87,29 @@ hr{
   height: 35px;
 }
 
+.btn-task {
+  padding: 0;
+  margin: 2rem 1rem 0;
+  background-color: rgba(183, 164, 136, .5);
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px;
+}
 
+.btn-task:hover {
+  background-color: #946b2d;
+  transform: scale(1.2) perspective(1px)
+}
+
+.check {
+  background-color: #946b2d;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+
+}
 .strike {
   text-decoration: line-through;
 }
@@ -105,19 +124,12 @@ hr{
   border: none;
   border-radius: 5px;
   width: 320px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 2rem;
   
 }
 
-.btn-task {
-  padding: 0;
-  background-color: rgba(183, 164, 136, .5);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: 2px 2px 2px;
-}
+
 /*----CheckBox-----*/
 
 .new-item {
@@ -148,9 +160,24 @@ hr{
 
 .btn-borrar-item {
   background-color: #946b2d;
+  border:none;
   border-radius: 50%;
-  padding: 5px 7px;
+  padding: 3px 5px;
   
+}
+
+.btn-enviar-editar-item {
+  background-color: #60451d;
+  border:none;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.btn-editar-item {
+  background-color: #946b2d;
+  border:none;
+  border-radius: 3px;
+  padding: 3px 5px;
 }
 
 /* input[type="checkbox"] {
@@ -166,3 +193,22 @@ hr{
   border-radius: 50%;
   transform: translateY(-0.075em);
 } */
+
+
+@media only screen and (min-width: 390px) and (max-width: 768px) {
+
+  .todo-list {
+    width: 350px;
+   /*  margin: 4rem auto;
+    padding: 2rem;
+     */
+  }
+}
+
+@media only screen and (min-width: 769px)
+{
+  .todo-list {
+    width:700px;
+    
+  }
+}

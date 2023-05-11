@@ -47,7 +47,7 @@ const TaskList = (props) => {
 
                 <p>
                     <button className="check" onClick={onClickRemoveItem}>
-                        Borrar tareas <br /> completadas
+                        Borrar completadas
                     </button>
                 </p>
             ) : null}
