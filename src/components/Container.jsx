@@ -16,13 +16,8 @@ const Container = () => {
 
 
   const handleAddItem = addItem => {
-<<<<<<< HEAD
-    
-    console.log(addItem)
-=======
 
     // console.log(addItem)
->>>>>>> develop
     // setList([...list, addItem]); //esto lo cambiamos por la linea 12
     
     const newList = list.slice();
@@ -49,7 +44,6 @@ const Container = () => {
   };
     return (
       <div>
-        
         <FormTodo handleAddItem={handleAddItem}/>
         <TaskList list={list} setList={setList}/>
         
