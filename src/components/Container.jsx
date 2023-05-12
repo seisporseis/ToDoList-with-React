@@ -44,7 +44,6 @@ const Container = () => {
   };
     return (
       <div>
-        
         <FormTodo handleAddItem={handleAddItem}/>
         <TaskList list={list} setList={setList}/>
         
