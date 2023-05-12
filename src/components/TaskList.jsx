@@ -37,21 +37,28 @@ const TaskList = (props) => {
     };
 
     const checkB = list.map(item => (
-        <Checkbox key={item.id} data={item} onChange={onChangeStatus} list={list} setList={setList} />
+        <Checkbox key={item.id} data={item} onChange={onChangeStatus} list={list} setList={setList} />    
     ));
     return (
+        <>
         <div className="todo-list">
+        {list.length ? (
+            <h3>Listado de Tareas</h3>
+        ) : null} 
+        
+        <div>
             {list.length ? checkB : "no hay tareas"} {/* si la lista está vacia muestra el mensaje "no hay tareas"*/}
             {list.length ? (
-
-
                 <p>
                     <button className="check" onClick={onClickRemoveItem}>
                         Borrar tareas <br /> completadas
                     </button>
+                    
                 </p>
             ) : null}
         </div>
+        </div>
+        </>
     );
 };
 
