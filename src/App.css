@@ -4,8 +4,7 @@ body {
   background-image: url("public/fondo ravenclaw.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed
-  ;
+  background-attachment: fixed;
   height: 100vh;
   text-align: center;
   margin: 0 auto;
@@ -13,18 +12,19 @@ body {
 }
 
 .App {
-  
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;                                           
 }
 
 h1 {
   font-family: 'Harry Potter', sans-serif;
   color: rgb(183, 164, 136);
-  font-size: 35px;
-  margin: 2rem 4rem 1rem 1.6rem;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  margin: 4rem 4rem 0 1.6rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.911);
 }
 
-button {
+/* button {
   border-radius: 5px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -32,7 +32,7 @@ button {
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.25s;
-}
+} */
 
 button.check {
   background-color: #946B2D;
@@ -76,10 +76,37 @@ button.check:active {
   align-items: center;
 }
 
+
+
 hr{
   background-color: rgba(148,107,45,1);
   height: 2px;
   margin: 1rem;
+}
+
+.file-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-input > .text {
+  outline: none;
+  padding: 0px 10px;
+  font-size: 15px;
+  width: 230px;
+  height: 46px;
+  background:transparent;
+  border: 0px solid;
+}
+
+
+input[type="text"] {
+width: 280px;
+height: 25px;
+border: 1px solid white;
+border-radius: 5px;
 }
 
 .text {
@@ -102,20 +129,18 @@ hr{
 /*----TAsklist----*/
 .todo-list {
   background-color: rgba(183, 164, 136, .5);
+  font-family: Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 5px;
   width: 320px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 2rem;
-  
+  color: white;
+  font-size: 1.1rem;
 }
 
+
 .btn-task {
-  padding: 0;
-  background-color: rgba(183, 164, 136, .5);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   box-shadow: 2px 2px 2px;
 }
 /*----CheckBox-----*/
@@ -132,7 +157,7 @@ hr{
   background-color: #dadadadf;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   padding: 1% 0;
   margin-bottom: 3%;
@@ -144,14 +169,32 @@ hr{
   color: #0e1a40;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
+  width:230px;
+  overflow-wrap: break-word;
 }
 
 .btn-borrar-item {
   background-color: #946b2d;
   border-radius: 50%;
   padding: 5px 7px;
+  border: 1px solid white;
   
 }
+
+.btn-editar-item {
+  background-color: #222f5b;
+  border-radius: 50%;
+  padding: 5px 7px;
+  border: 1px solid white;
+}
+
+.btn-enviar-editar-item {
+  background-color: #222f5b;
+  border-radius: 50%;
+  padding: 5px 7px;
+  border: 1px solid white;
+}
+
 
 /* input[type="checkbox"] {
   -webkit-appearance: none;
@@ -166,3 +209,22 @@ hr{
   border-radius: 50%;
   transform: translateY(-0.075em);
 } */
+
+@media only screen and (min-width: 390px) and (max-width: 768px) {
+
+  .todo-list {
+    width: 350px;
+
+   /*  margin: 4rem auto;
+    padding: 2rem;
+     */
+  }
+}
+
+@media only screen and (min-width: 769px)
+{
+  .todo-list {
+    width:700px;
+
+  }
+}

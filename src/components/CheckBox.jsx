@@ -54,21 +54,23 @@ const Checkbox = props => {
 					:
 					(<div className="todo__text">{description}</div>)}
 
-				<button className="btn-borrar-item" onClick={onClickBorrarItem}>borrar</button>
+				<button className="btn-borrar-item" 
+				onClick={onClickBorrarItem}>
+				<img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/ffffff/trash--v1.png" alt="trash--v1"/>
+				</button>
 
 				{todoEdit == idValue ?
 					(<button className="btn-enviar-editar-item"
 						onClick={() =>
-						editTodo(idValue)}>Enviar editar
+						editTodo(idValue)}>
+							<img width="20" height="20" src="https://img.icons8.com/ios-filled/50/ffffff/update-left-rotation.png" alt="update-left-rotation"/>
 						</button>)
 					:
 					(<button  className="btn-editar-item" onClick={() =>
 						setTodoEdit(idValue)}>
-						Editar
+						<img width="20" height="20" src="https://img.icons8.com/ios/50/ffffff/edit--v1.png" alt="edit--v1"/>
 					</button>
 					)}
-
-				
 
 			</label>
 

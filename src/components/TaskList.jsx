@@ -41,13 +41,13 @@ const TaskList = (props) => {
     ));
     return (
         <div className="todo-list">
-            {list.length ? checkB : "no hay tareas"} {/* si la lista está vacia muestra el mensaje "no hay tareas"*/}
+            {list.length ? checkB : "No tienes tareas pendientes"} {/* si la lista está vacia muestra el mensaje "no hay tareas"*/}
             {list.length ? (
 
 
                 <p>
                     <button className="check" onClick={onClickRemoveItem}>
-                        Borrar tareas <br /> completadas
+                        Limpiar <br /> completadas
                     </button>
                 </p>
             ) : null}
