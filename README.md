@@ -1,7 +1,7 @@
 #ToDo Lista de Tareas 
 <div>
 <p style = 'text-align:center;'>
-<img src="./public/imagen_proyecto.png" alt="Todo Lista" width="300px">
+<img src="./public/captura todo.png" alt="Todo Lista" width="300px">
 </p>
 </div>
 
