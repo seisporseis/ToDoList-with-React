@@ -48,7 +48,7 @@ const Checkbox = props => {
 					onChange={onChange}
 				/>
 				{todoEdit == idValue ?
-					(<input
+					(<input className="input-editar"
 						type="text"
 						onChange={(e) => setEditingText(e.target.value)}
 						value={editingText}

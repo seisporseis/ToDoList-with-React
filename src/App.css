@@ -23,10 +23,10 @@ body {
 h1 {
   font-family: 'Harry Potter', sans-serif;
   color: rgb(183, 164, 136);
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   letter-spacing: 0.2rem;
   margin: 4rem 4rem 1rem 3.5rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.911);
+  text-shadow: 0 1px 0 rgba(35, 35, 35, 0.911);
 }
 
 
@@ -101,6 +101,7 @@ border-radius: 5px;
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 2px;
+  margin-top: -4px;
 }
 
 .btn-task:hover {
@@ -177,27 +178,46 @@ border-radius: 5px;
   overflow-wrap: break-word;
 }
 
+.input-editar {
+  width: 150px;
+}
+
 .btn-borrar-item {
   background-color: #946b2d;
   border:none;
   border-radius: 50%;
-  padding: 2px 3px;
+  padding: 4px 9px;
   border: 1px solid white;
   
+}
+
+.btn-borrar-item img{
+  width: 10px;
+  height: 13px;
 }
 
 .btn-editar-item {
   background-color: #222f5b;
   border-radius: 50%;
-  padding: 2px 3px;
+  padding: 4px 9px;
   border: 1px solid white;
+}
+
+.btn-editar-item img {
+  width: 10px;
+  height: 13px;
 }
 
 .btn-enviar-editar-item {
   background-color: #222f5b;
   border-radius: 50%;
-  padding: 5px 7px;
+  padding: 4px 9px;
   border: 1px solid white;
+}
+
+.btn-enviar-editar-item img {
+  width: 10px;
+  height: 13px;
 }
 
 
@@ -229,10 +249,9 @@ border-radius: 5px;
 @media only screen and (min-width: 390px) and (max-width: 768px) {
 
   .todo-list {
-    width: 360px;
-   /*  margin: 4rem auto;
-    padding: 2rem;
-     */
+    width: 370px;
+    margin: 4rem auto;
+    padding: 2rem; 
   }
 }
 
@@ -240,6 +259,11 @@ border-radius: 5px;
 {
   .todo-list {
     width:700px;
-
+    margin: 4rem auto;
+    padding: 2rem;
   }
+}
+
+h1 {
+  font-size: 5rem;
 }
