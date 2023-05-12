@@ -26,19 +26,19 @@ Se realizo un boceto correspondiente con el diseño de la página web en Figma, 
 
 Lenguaje de programación y herramientas de gestión usadas:
 
-HTML 5
-CSS 3
-Figma
-Trello
-Vite
-React
-Github
-Modalidades pedagógicas trabajadas
-trabajo en equipo
-sprint
-SCRUM (Roles, Daily, Planning, Retrospective)
-WireFrame - Mockup - UX/UI en Figma
-Git para control de versiones
+HTML 5  
+CSS 3  
+Figma  
+Trello  
+Vite  
+React  
+Github  
+Modalidades pedagógicas trabajadas  
+trabajo en equipo  
+sprint  
+SCRUM (Roles, Daily, Planning, Retrospective)  
+WireFrame - Mockup - UX/UI en Figma  
+Git para control de versiones  
 
 ##LINKS
 
