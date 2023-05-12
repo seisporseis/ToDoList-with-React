@@ -54,7 +54,7 @@ const Checkbox = props => {
 						value={editingText}
 					/>)
 					:
-					(<div className="todo__text">{description}</div>)}
+					(<div className={`todo__text ${done ? "done" : ""}`}>{description}</div>)}
 
 				<button className="btn-borrar-item" 
 				onClick={onClickBorrarItem}>
