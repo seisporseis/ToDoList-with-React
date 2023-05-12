@@ -1,5 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("public/fondo ravenclaw.jpg");
   background-size: cover;
@@ -17,44 +23,13 @@ body {
 h1 {
   font-family: 'Harry Potter', sans-serif;
   color: rgb(183, 164, 136);
-  font-size: 4rem;
+  font-size: 3.3rem;
   letter-spacing: 0.2rem;
-  margin: 4rem 4rem 0 1.6rem;
+  margin: 4rem 4rem 1rem 3.5rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.911);
 }
 
-/* button {
-  border-radius: 5px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em; 
-  font-size: 1em;
-  font-weight: 500; 
-  cursor: pointer;
-  transition: border-color 0.25s;
-} */
 
-/* button.check {
-  background-color: #946B2D;
-  color: white;
-  border-radius: 15px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-  -webkit-user-select: none;
-
-}
- */
-/* button.check:hover {
-  transform: translateY(-1px);
-}
-
-button.check:active {
-  background-color: #bb8739;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  transform: translateY(0);
-} */
 
 /*------Conteiner--------*/
 
@@ -87,7 +62,8 @@ hr{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  margin: 0 0 1rem 4rem;
+  gap: 1rem;
 }
 
 .file-input > .text {
@@ -96,34 +72,34 @@ hr{
   font-size: 15px;
   width: 230px;
   height: 46px;
-  background:transparent;
+  /* background:transparent; */
   border: 0px solid;
 }
 
-
+/* 
 input[type="text"] {
 width: 280px;
 height: 25px;
 border: 1px solid white;
 border-radius: 5px;
-}
+} */
 
 .text {
-  margin: 0 0.7rem 1rem 1.1rem;
+  margin: 0; 
   border-radius: 3px;
   box-shadow: 2px 5px 8px;
-  width: 250px;
-  height: 35px;
+  width:300px;
+  height: 50px;
 }
 
 .btn-task {
-  padding: 0;
-  margin: 2rem 1rem 0;
-  background-color: rgba(183, 164, 136, .5);
-  width: 30px;
-  height: 30px;
+  padding:0 5px;
+  font-size: 3rem;
+  text-align: center;
+  color:white;
+  background-color: rgba(34, 47, 91, .8);
   border: none;
-  border-radius: 50%;
+  border-radius: 5px;
   box-shadow: 2px 2px 2px;
 }
 
@@ -148,13 +124,14 @@ border-radius: 5px;
 }
 
 /*----TAsklist----*/
+
 .todo-list {
   background-color: rgba(183, 164, 136, .5);
   font-family: Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 5px;
-  width: 320px;
-  margin: 4rem auto;
+  width: 350px;
+  margin: 4rem 1rem;
   padding: 2rem;
   color: white;
   font-size: 1.1rem;
@@ -208,7 +185,7 @@ border-radius: 5px;
   background-color: #946b2d;
   border:none;
   border-radius: 50%;
-  padding: 5px 7px;
+  padding: 2px 3px;
   border: 1px solid white;
   
 }
@@ -216,7 +193,7 @@ border-radius: 5px;
 .btn-editar-item {
   background-color: #222f5b;
   border-radius: 50%;
-  padding: 5px 7px;
+  padding: 2px 3px;
   border: 1px solid white;
 }
 
@@ -284,7 +261,7 @@ input[type="checkbox"]:checked {
 @media only screen and (min-width: 390px) and (max-width: 768px) {
 
   .todo-list {
-    width: 350px;
+    width: 360px;
    /*  margin: 4rem auto;
     padding: 2rem;
      */

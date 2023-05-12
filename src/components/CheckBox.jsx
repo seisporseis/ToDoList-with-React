@@ -8,11 +8,13 @@ const Checkbox = props => {
 		data: { id, description, done }
 	} = props;
 
+	const idValue = props.data.id;
+	
 	const { list, setList } = props;
 	const [todoEdit, setTodoEdit] = useState(null)
-	const [editingText, setEditingText] = useState("")
+	const [editingText, setEditingText] = useState(todoEdit === idValue ? "" : description);
 
-	const idValue = props.data.id;
+	
 
 	const onClickBorrarItem = e => {
 		const borrarItem = list.filter(item => item.id != idValue)
