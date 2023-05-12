@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
 }
 
 .App {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;                                           
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -45,15 +45,15 @@ h1 {
 
 /*----FormTodo---*/
 
-.todo-input{
+.todo-input {
   height: 150px;
   align-items: center;
 }
 
 
 
-hr{
-  background-color: rgba(148,107,45,1);
+hr {
+  background-color: rgba(148, 107, 45, 1);
   height: 2px;
   margin: 1rem;
 }
@@ -66,7 +66,7 @@ hr{
   gap: 1rem;
 }
 
-.file-input > .text {
+.file-input>.text {
   outline: none;
   padding: 0px 10px;
   font-size: 15px;
@@ -85,18 +85,18 @@ border-radius: 5px;
 } */
 
 .text {
-  margin: 0; 
+  margin: 0;
   border-radius: 3px;
   box-shadow: 2px 5px 8px;
-  width:300px;
+  width: 300px;
   height: 50px;
 }
 
 .btn-task {
-  padding:0 5px;
+  padding: 0 5px;
   font-size: 3rem;
   text-align: center;
-  color:white;
+  color: white;
   background-color: rgba(34, 47, 91, .8);
   border: none;
   border-radius: 5px;
@@ -116,6 +116,7 @@ border-radius: 5px;
   padding: 1rem;
 
 }
+
 .strike {
   text-decoration: line-through;
 }
@@ -143,17 +144,18 @@ border-radius: 5px;
 .btn-task {
   box-shadow: 2px 2px 2px;
 }
+
 /*----CheckBox-----*/
 
 .new-item {
   display: flex;
 }
 
-.file-input{
+.file-input {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+
 }
 
 /* .todo__state {
@@ -178,7 +180,7 @@ border-radius: 5px;
   color: #0e1a40;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
-  width:230px;
+  width: 230px;
   overflow-wrap: break-word;
 }
 
@@ -188,14 +190,14 @@ border-radius: 5px;
 
 .btn-borrar-item {
   background-color: #946b2d;
-  border:none;
+  border: none;
   border-radius: 50%;
   padding: 4px 9px;
   border: 1px solid white;
-  
+
 }
 
-.btn-borrar-item img{
+.btn-borrar-item img {
   width: 10px;
   height: 13px;
 }
@@ -247,16 +249,22 @@ input[type="checkbox"] {
   border: 0.15em solid #222f5b;
   border-radius: 50%;
   transform: translateY(-0.075em);
-}  
+}
 
 input[type="checkbox"]:checked {
-  background-color:#946b2d;
+  background-color: #946b2d;
 }
 
 @keyframes done {
-  0%   { width : 0; }
-  100% { width: 100%; }
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
+
 .done {
   color: #946b2d;
   opacity: .8;
@@ -283,19 +291,48 @@ input[type="checkbox"]:checked {
   .todo-list {
     width: 370px;
     margin: 4rem auto;
-    padding: 2rem; 
-  }
-}
-
-@media only screen and (min-width: 769px)
-{
-  .todo-list {
-    width:700px;
-    margin: 4rem auto;
     padding: 2rem;
   }
 }
 
-h1 {
-  font-size: 5rem;
+@media only screen and (min-width: 769px) {
+  .todo-list {
+    width: 700px;
+    margin: 4rem auto;
+    padding: 2rem;
+
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .btn-editar-item {
+    padding: 6px 12px;
+  }
+
+  .btn-editar-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-borrar-item {
+    padding: 6px 12px;
+    margin-left: 15rem;
+  }
+
+  .btn-borrar-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-enviar-editar-item {
+    padding: 6px 12px;
+  
+  }
+
+  .btn-enviar-editar-item img {
+    width: 20px;
+    height: 20px;
+  }
 }
