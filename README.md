@@ -49,5 +49,3 @@ https://www.figma.com/file/YOhSbx6ELalCzmUFR4cLMV/Ravenclaw-App-ToDoList?type=de
 ##PARTICIPANTES
 
 Beatriz, Gladys, Daniel, Sabrina, Dalia.
-
-<span style="color:blue">some *blue* text</span>.
