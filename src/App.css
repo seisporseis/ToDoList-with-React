@@ -4,6 +4,8 @@ body {
   background-image: url("public/fondo ravenclaw.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed
+  ;
   height: 100vh;
   text-align: center;
   margin: 0 auto;
@@ -32,12 +34,27 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
-  border-color: #252fc4;
+button.check {
+  background-color: #946B2D;
+  color: white;
+  border-radius: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  -webkit-user-select: none;
+
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+button.check:hover {
+  transform: translateY(-1px);
+}
+
+button.check:active {
+  background-color: #bb8739;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
 }
 
 /*------Conteiner--------*/
@@ -49,6 +66,8 @@ button:focus-visible {
   margin: auto;
   
 }
+
+
 
 /*----FormTodo---*/
 
@@ -72,11 +91,14 @@ hr{
 }
 
 
+.strike {
+  text-decoration: line-through;
+}
 
+.blur {
+  filter: blur(3px);
+}
 
-
-
-  
 /*----TAsklist----*/
 .todo-list {
   background-color: rgba(183, 164, 136, .5);
