@@ -7,14 +7,14 @@
 
 ## Ej3_RAVENCLAW
 
-~~~
+
 Este repositorio contine un proyecto para realizar una lista de tareas o sucesos. 
 
 Está construido con React, usando  una herramienta para desarrollo de aplicaciones Frontend  como es Vite. Por lo que mantiene sus comandos de ejecución usando NPM.
-~~~
+
 
 ##GRUPO RAVENCLAW
-~~~
+
 La aplicación te permite tener en cuenta la posibilidad de que el/la usuario/a pueda:
 - Modificar el estado del ítem dependiendo del evento
 - Los ítems se ordenan por orden alfabético.
@@ -39,13 +39,13 @@ sprint
 SCRUM (Roles, Daily, Planning, Retrospective)
 WireFrame - Mockup - UX/UI en Figma
 Git para control de versiones
-~~~
+
 ##LINKS
-~~~
+
 https://trello.com/b/WpSBiSaz/ravenclaw#
 https://www.figma.com/file/YOhSbx6ELalCzmUFR4cLMV/Ravenclaw-App-ToDoList?type=design&node-id=0-1&t=dgWclnI7rcrFCvND-0
-~~~
+
 ##PARTICIPANTES
-~~~
+
 Beatriz, Gladys, Daniel, Sabrina, Dalia.
-~~~
+
