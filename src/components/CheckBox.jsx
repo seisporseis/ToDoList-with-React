@@ -54,7 +54,7 @@ const Checkbox = props => {
 					:
 					(<div className="todo__text">{description}</div>)}
 
-				<button className="btn-borrar-item" onClick={onClickBorrarItem}>borrar</button>
+				<button className="btn-borrar-item" onClick={onClickBorrarItem}><img src="public/icons8-trash-can-30.svg" alt="trash can" /></button>
 
 				{todoEdit == idValue ?
 					(<button className="btn-enviar-editar-item"
