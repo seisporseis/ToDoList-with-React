@@ -1,4 +1,4 @@
-#ToDo Lista de Tareas 
+#Lista de Tareas - Bootcamp full stack en FACTORÍA F5
 <div>
 <p align="center">
 <img src="./public/CAPTURA TODO.png" alt="Todo Lista" width="600px">
@@ -33,9 +33,9 @@ Trello
 Vite  
 React  
 Github  
-Modalidades pedagógicas trabajadas  
-trabajo en equipo  
-sprint  
+Modalidades pedagógicas trabajadas: 
+Trabajo en equipo  
+Sprint  
 SCRUM (Roles, Daily, Planning, Retrospective)  
 WireFrame - Mockup - UX/UI en Figma  
 Git para control de versiones  
